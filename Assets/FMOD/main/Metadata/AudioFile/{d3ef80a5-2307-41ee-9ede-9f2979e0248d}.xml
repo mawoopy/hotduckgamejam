@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{d3ef80a5-2307-41ee-9ede-9f2979e0248d}">
+		<property name="assetPath">
+			<value>quack quack-014.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8b9e05b3-9f2f-4be8-9302-19d2fee7bb35}</destination>
+		</relationship>
+	</object>
+</objects>
