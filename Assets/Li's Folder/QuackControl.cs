@@ -41,7 +41,7 @@ public class QuackControl : MonoBehaviour
                 fliesEatNum++;
                 foreach (Collider col in flyCollider)
                 {
-                    Destroy (col.gameObject);
+                    Destroy (col.transform.parent.gameObject);
                     Debug.Log("Fly eaten");
                 }
             }

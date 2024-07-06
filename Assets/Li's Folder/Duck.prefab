@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8774554125649318633}
   - component: {fileID: -7893055951345265645}
   - component: {fileID: 512368038128712078}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Duck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.1914, y: -3.097, z: 0.000000089562}
-  m_LocalScale: {x: 0.2487, y: 0.2487, z: 0.2487}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3306045079627005732}
@@ -54,7 +54,7 @@ MonoBehaviour:
   onQuack:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8774554125649318633}
+      - m_Target: {fileID: 512368038128712078}
         m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
         m_MethodName: Play
         m_Mode: 1
@@ -159,12 +159,13 @@ MonoBehaviour:
   duckFoot: {fileID: 4434496787332626105}
   keyToExtendNeck: 119
   keyToShortenNeck: 32
-  maxNeckLength: 5
-  timeToShortenNeck: 0.2
+  maxNeckLength: 12
+  timeToShortenNeck: 0.3
+  groundDistanceCheck: 0.05
   groundMask:
     serializedVersion: 2
     m_Bits: 64
-  extendSpeed: 2
+  extendSpeed: 4
   isNeckGoingBack: 0
   isGrounded: 0
   neckHasBack: 0
@@ -369,10 +370,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5168674574421245363, guid: 8c7adf9ae56487846b8ad56ac01fd49c, type: 3}
+      propertyPath: m_RootBone
+      value: 
+      objectReference: {fileID: 5841431336290875974}
     - target: {fileID: 919132149155446097, guid: 8c7adf9ae56487846b8ad56ac01fd49c, type: 3}
       propertyPath: m_Name
       value: DuckRig
       objectReference: {fileID: 0}
+    - target: {fileID: 2543502012259344551, guid: 8c7adf9ae56487846b8ad56ac01fd49c, type: 3}
+      propertyPath: m_RootBone
+      value: 
+      objectReference: {fileID: 3830264450204567878}
+    - target: {fileID: 3022497686113154721, guid: 8c7adf9ae56487846b8ad56ac01fd49c, type: 3}
+      propertyPath: m_RootBone
+      value: 
+      objectReference: {fileID: 5841431336290875974}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -414,6 +427,7 @@ MonoBehaviour:
   quackControl: {fileID: 6825955919814959234}
   extendNeck: {fileID: 2060591087711408317}
   animator: {fileID: 3674487840238557061}
+  showDebugLogs: 0
 --- !u!95 &3674487840238557061
 Animator:
   serializedVersion: 5
@@ -440,8 +454,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8c7adf9ae56487846b8ad56ac01fd49c, type: 3}
   m_PrefabInstance: {fileID: 3056773195691792591}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &3830264450204567878 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2255179986877354377, guid: 8c7adf9ae56487846b8ad56ac01fd49c, type: 3}
+  m_PrefabInstance: {fileID: 3056773195691792591}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4434496787332626105 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1720841611072990838, guid: 8c7adf9ae56487846b8ad56ac01fd49c, type: 3}
+  m_PrefabInstance: {fileID: 3056773195691792591}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5841431336290875974 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -325602916849753463, guid: 8c7adf9ae56487846b8ad56ac01fd49c, type: 3}
   m_PrefabInstance: {fileID: 3056773195691792591}
   m_PrefabAsset: {fileID: 0}

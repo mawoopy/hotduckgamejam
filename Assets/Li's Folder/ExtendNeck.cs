@@ -23,6 +23,7 @@ public class ExtendNeck : MonoBehaviour
     [Header("Variables")]
     [SerializeField] private float maxNeckLength;
     [SerializeField] private float timeToShortenNeck;
+    [SerializeField] private float groundDistanceCheck = 0.05f;
     [SerializeField] private LayerMask groundMask;
     float currentBottomNeckPos = 0;
     float currentTopNeckPos = 0;
@@ -48,7 +49,7 @@ public class ExtendNeck : MonoBehaviour
     void Update()
     {
         topNeckPos = Mathf.Clamp(topNeckBone.position.y, startTopNeckPos, startTopNeckPos + maxNeckLength);
-        isGrounded = Physics.CheckSphere(duckFoot.position, 0.01f, groundMask);
+        if (!isGrounded) isGrounded = Physics.CheckSphere(duckFoot.position, groundDistanceCheck, groundMask);
         
 
         if (Input.GetKey(keyToExtendNeck) && isGrounded) 
