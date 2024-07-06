@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8277915372619545595}
   - component: {fileID: 6114605409923342440}
+  - component: {fileID: 6485121759464680258}
   m_Layer: 0
   m_Name: MusicManager
   m_TagString: Untagged
@@ -63,3 +64,15 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &6485121759464680258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6398390011376819567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195c4205dbef7e244bdcb033badc9395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
