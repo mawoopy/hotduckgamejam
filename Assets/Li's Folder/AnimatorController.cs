@@ -12,22 +12,24 @@ public class AnimatorController : MonoBehaviour
     bool isFalling;
     bool mouthHasOpened;
 
+    [SerializeField] private bool showDebugLogs = false;
+
     // Update is called once per frame
     void Update()
     {
         mouthIsOpen = quackControl.mouseIsOpen;
-        Debug.Log("mouth is open" + mouthIsOpen);
+        if (showDebugLogs) Debug.Log("mouth is open" + mouthIsOpen);
         isWalking = extendNeck.isGrounded;
-        Debug.Log("Is Walking" + isWalking);
+        if (showDebugLogs) Debug.Log("Is Walking" + isWalking);
         if (!extendNeck.isGrounded && extendNeck.neckHasBack)
         {
             isFalling = true;
-            Debug.Log("Is Falling" + isFalling);
+            if (showDebugLogs) Debug.Log("Is Falling" + isFalling);
         }
         else
         {
             isFalling = false;
-            Debug.Log("Is Falling" + isFalling);
+            if (showDebugLogs) Debug.Log("Is Falling" + isFalling);
         }
 
         if (isWalking)

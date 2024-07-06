@@ -31,7 +31,7 @@ public class ExtendNeck : MonoBehaviour
     private bool isExtending = false;
 
     [Header("Status")]
-    public bool isNeckGoingBack;
+    public bool isNeckGoingBack = false;
     public bool isGrounded;
     public bool neckHasBack;
     // Start is called before the first frame update
@@ -66,7 +66,10 @@ public class ExtendNeck : MonoBehaviour
         }
         if (Input.GetKey(keyToShortenNeck) && !neckHasBack)
         {
-            isNeckGoingBack = true;
+            if (!isNeckGoingBack) {
+                isNeckGoingBack = true;
+                onShrinkNeck.Invoke();
+            }
             currentBottomNeckPos = rootController.position.y;
             currentTopNeckPos = topNeckBone.position.y;
 
