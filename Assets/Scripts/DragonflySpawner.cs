@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Spawner : MonoBehaviour
+public class DraonflySpawner : MonoBehaviour
 {
-    public GameObject obstacle;  // Reference to the Prefab to spawn
+    public GameObject fly;  // Reference to the Prefab to spawn
     public Transform spawnPoint;      // Location where the object will be spawned
     public float spawnInterval = 2f;  // Time interval between spawns
 
@@ -13,7 +13,7 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
-        obstacle = GameObject.Find("Obstacle");
+        fly = GameObject.Find("Dragonfly");
 
         timeSinceLastSpawn = 0f;
     }
@@ -34,6 +34,6 @@ public class Spawner : MonoBehaviour
     void SpawnObject()
     {
         //spawn Fly every ? seconds
-        Instantiate(obstacle, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(fly, spawnPoint.position, spawnPoint.rotation);
     }
 }

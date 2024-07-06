@@ -376,7 +376,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c7adf9ae56487846b8ad56ac01fd49c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4428670306692166347}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c7adf9ae56487846b8ad56ac01fd49c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3674487840238557061}
   m_SourcePrefab: {fileID: 100100000, guid: 8c7adf9ae56487846b8ad56ac01fd49c, type: 3}
 --- !u!4 &612142125408306353 stripped
 Transform:
@@ -388,6 +394,47 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 755850849372934383, guid: 8c7adf9ae56487846b8ad56ac01fd49c, type: 3}
   m_PrefabInstance: {fileID: 3056773195691792591}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2786249151387018654 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c7adf9ae56487846b8ad56ac01fd49c, type: 3}
+  m_PrefabInstance: {fileID: 3056773195691792591}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4428670306692166347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2786249151387018654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a3d9b53754d284b9a54fb5118b2391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quackControl: {fileID: 6825955919814959234}
+  extendNeck: {fileID: 2060591087711408317}
+  animator: {fileID: 3674487840238557061}
+--- !u!95 &3674487840238557061
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2786249151387018654}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ac44b9b7c8e539a4fb5e300804007d36, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &3306045079627005732 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8c7adf9ae56487846b8ad56ac01fd49c, type: 3}
