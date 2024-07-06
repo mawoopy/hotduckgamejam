@@ -268,6 +268,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2060591087711408317, guid: b88a92887754df84489f01457cd68a3e, type: 3}
+      propertyPath: extendSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2060591087711408317, guid: b88a92887754df84489f01457cd68a3e, type: 3}
+      propertyPath: maxNeckLength
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2060591087711408317, guid: b88a92887754df84489f01457cd68a3e, type: 3}
+      propertyPath: timeToShortenNeck
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825955919814959234, guid: b88a92887754df84489f01457cd68a3e, type: 3}
+      propertyPath: eatRadius
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7577034651410916296, guid: b88a92887754df84489f01457cd68a3e, type: 3}
       propertyPath: m_Name
       value: Duck
