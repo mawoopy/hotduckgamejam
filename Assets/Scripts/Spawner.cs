@@ -16,7 +16,7 @@ public class Spawner : MonoBehaviour
     {
         obstacle = GameObject.Find("Obstacle");
 
-        obstacle = GameObject.Find("Fly");
+        fly = GameObject.Find("Dragonfly");
 
         timeSinceLastSpawn = 0f;
     }

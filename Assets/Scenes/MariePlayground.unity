@@ -171,10 +171,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7935800271972204938, guid: 8c9f5ebb3b701af4f88eea064abff795, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8603868958486676486, guid: 8c9f5ebb3b701af4f88eea064abff795, type: 3}
       propertyPath: m_Name
       value: Duck Player Prefab
@@ -1186,9 +1182,9 @@ SceneRoots:
   m_Roots:
   - {fileID: 419118987}
   - {fileID: 1142902058}
+  - {fileID: 228355525}
   - {fileID: 3231927017308156204}
   - {fileID: 1242000937817609767}
-  - {fileID: 228355525}
   - {fileID: 134608809}
   - {fileID: 1536205997078827601}
   - {fileID: 5764481095579535848}
