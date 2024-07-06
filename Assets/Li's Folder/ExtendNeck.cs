@@ -60,7 +60,7 @@ public class ExtendNeck : MonoBehaviour
         if (isNeckGoingBack)
         {
             rigidbody.Sleep();
-            ShortenNeck(currentTopNeckPos, currentBottomNeckPos);
+            ShortenNeck();
         }
         else
         {
@@ -83,7 +83,7 @@ public class ExtendNeck : MonoBehaviour
         topNeckBone.position = new Vector3(topNeckBone.position.x, topNeckPos, topNeckBone.position.z);
     }
 
-    public void ShortenNeck(float firstTopNeckPos, float firstBottomNeckPos)
+    public void ShortenNeck()
     {
         float speedForShortening = (currentTopNeckPos - currentBottomNeckPos) / timeToShortenNeck;
         float cBottomNeckPos = rootController.position.y;
