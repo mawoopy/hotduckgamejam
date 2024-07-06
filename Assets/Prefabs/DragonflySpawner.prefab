@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2734679391379923830}
+  - component: {fileID: 8798627927444592931}
   m_Layer: 0
   m_Name: DragonflySpawner
   m_TagString: Untagged
@@ -33,6 +34,21 @@ Transform:
   - {fileID: 8150949303282847092}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8798627927444592931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116873576855306953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4785a48c48a453843b639d0205afa875, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fly: {fileID: 2012173899550923534, guid: 7d4d9327bac90924e8af6a41242819bb, type: 3}
+  spawnPoint: {fileID: 8150949303282847092}
+  spawnInterval: 3
 --- !u!1 &1275383943872456517
 GameObject:
   m_ObjectHideFlags: 0

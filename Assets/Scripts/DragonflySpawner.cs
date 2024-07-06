@@ -13,8 +13,6 @@ public class DraonflySpawner : MonoBehaviour
 
     void Start()
     {
-        fly = GameObject.Find("Dragonfly");
-
         timeSinceLastSpawn = 0f;
     }
 
