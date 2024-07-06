@@ -6,7 +6,9 @@ public class ExtendNeck : MonoBehaviour
 {
     [Header("Components")]
     [SerializeField] private Transform topNeckBone;
+    [SerializeField] private Transform duckFoot;
     private Transform rootController;
+    private Rigidbody rigidbody;
     private float topNeckPos;
     private float startTopNeckPos;
     [Header("Controls")]
@@ -15,15 +17,22 @@ public class ExtendNeck : MonoBehaviour
 
     [Header("Variables")]
     [SerializeField] private float maxNeckLength;
+    [SerializeField] private float timeToShortenNeck;
+    [SerializeField] private LayerMask groundMask;
+    float currentBottomNeckPos = 0;
+    float currentTopNeckPos = 0;
     private float minNeckLength;
     public float extendSpeed;
 
     [Header("Status")]
-    public bool isNeckExtending;
+    public bool isNeckGoingBack;
+    public bool isGrounded;
+    public bool neckHasBack;
     // Start is called before the first frame update
     void Start()
     {
         rootController = GetComponent<Transform>();
+        rigidbody = GetComponent<Rigidbody>();
         startTopNeckPos = topNeckBone.position.y;
         minNeckLength = startTopNeckPos - rootController.position.y;
         topNeckPos = Mathf.Clamp(topNeckBone.position.y, startTopNeckPos, startTopNeckPos + maxNeckLength);
@@ -33,14 +42,38 @@ public class ExtendNeck : MonoBehaviour
     void Update()
     {
         topNeckPos = Mathf.Clamp(topNeckBone.position.y, startTopNeckPos, startTopNeckPos + maxNeckLength);
+        isGrounded = Physics.CheckSphere(duckFoot.position, 0.01f, groundMask);
+        
 
-        if (Input.GetKey(keyToExtendNeck)) 
+        if (Input.GetKey(keyToExtendNeck) && isGrounded) 
         {
             ExtendTheNeck();
         }
-        if (Input.GetKey(keyToShortenNeck))
+        if (Input.GetKey(keyToShortenNeck) && !neckHasBack)
         {
-            ShortenNeck();
+            isNeckGoingBack = true;
+            currentBottomNeckPos = rootController.position.y;
+            currentTopNeckPos = topNeckBone.position.y;
+            Debug.Log("going back");
+        }
+
+        if (isNeckGoingBack)
+        {
+            rigidbody.Sleep();
+            ShortenNeck(currentTopNeckPos, currentBottomNeckPos);
+        }
+        else
+        {
+            rigidbody.WakeUp();
+        }
+
+        if (topNeckBone.position.y - rootController.position.y <= minNeckLength)
+        {
+            neckHasBack = true;
+        }
+        else
+        {
+            neckHasBack = false;
         }
     }
 
@@ -50,12 +83,18 @@ public class ExtendNeck : MonoBehaviour
         topNeckBone.position = new Vector3(topNeckBone.position.x, topNeckPos, topNeckBone.position.z);
     }
 
-    public void ShortenNeck()
+    public void ShortenNeck(float firstTopNeckPos, float firstBottomNeckPos)
     {
-        float bottomNeckPos = topNeckPos - minNeckLength;
+        float speedForShortening = (currentTopNeckPos - currentBottomNeckPos) / timeToShortenNeck;
+        float cBottomNeckPos = rootController.position.y;
+        float bottomNeckPos = cBottomNeckPos +  speedForShortening * Time.deltaTime;
+        
         rootController.position = new Vector3(rootController.position.x, bottomNeckPos, rootController.position.z);
+        topNeckBone.position = new Vector3(topNeckBone.position.x, currentTopNeckPos, topNeckBone.position.z);
 
-        topNeckPos = bottomNeckPos + minNeckLength;
-        topNeckBone.position = new Vector3(topNeckBone.position.x, topNeckPos, topNeckBone.position.z);
+        if (topNeckPos - bottomNeckPos <= minNeckLength)
+        {
+            isNeckGoingBack = false;
+        }
     }
 }
