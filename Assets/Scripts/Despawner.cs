@@ -6,7 +6,7 @@ public class Despawner : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("DespawnItem"))
+        if (other.CompareTag("Obstacle"))
         {
             Destroy(other.gameObject);
         }
