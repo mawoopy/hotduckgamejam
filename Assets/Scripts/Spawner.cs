@@ -13,8 +13,6 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
-        obstacle = GameObject.Find("Obstacle");
-
         timeSinceLastSpawn = 0f;
     }
 

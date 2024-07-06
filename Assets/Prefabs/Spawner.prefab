@@ -182,7 +182,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ab82c5710e2a0e4f92bcc68cfaf3df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacle: {fileID: 0}
-  fly: {fileID: 0}
+  obstacle: {fileID: 2434562909405728092, guid: f09967e7b4ab9e74c89a3a6fa62f9426, type: 3}
   spawnPoint: {fileID: 5759099660158920453}
   spawnInterval: 1
