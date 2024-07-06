@@ -199,7 +199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 221041897}
   - component: {fileID: 221041896}
-  - component: {fileID: 221041895}
+  - component: {fileID: 221041898}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -207,14 +207,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &221041895
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 221041894}
-  m_Enabled: 1
 --- !u!20 &221041896
 Camera:
   m_ObjectHideFlags: 0
@@ -281,6 +273,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 8.589, y: 178.346, z: 0.165}
+--- !u!114 &221041898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221041894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1001 &238007292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -303,7 +308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 457380649675403897, guid: b88a92887754df84489f01457cd68a3e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -269.34512
+      value: -277.2
       objectReference: {fileID: 0}
     - target: {fileID: 457380649675403897, guid: b88a92887754df84489f01457cd68a3e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -712,7 +717,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 787143695231390675, guid: 20be20212684eea42bb71a37ca587f4b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -255.3
+      value: -244.8
       objectReference: {fileID: 0}
     - target: {fileID: 787143695231390675, guid: 20be20212684eea42bb71a37ca587f4b, type: 3}
       propertyPath: m_LocalPosition.y
