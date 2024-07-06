@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{b15f41b3-7296-40df-9f6d-cfed79dd8c61}">
+		<property name="name">
+			<value>Parameter 1</value>
+		</property>
+		<relationship name="folder">
+			<destination>{1204c0aa-e4b7-4953-aa6a-0af4f63c7e56}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{96a254e2-01cf-4331-b4f0-47f905a0178c}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{96a254e2-01cf-4331-b4f0-47f905a0178c}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>8</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Eat pea</value>
+			<value>Extand</value>
+			<value>Collaps</value>
+			<value>Stretch up</value>
+			<value>Stretch down</value>
+			<value>Short quark</value>
+			<value>Long quark</value>
+			<value>Hit a bird</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
