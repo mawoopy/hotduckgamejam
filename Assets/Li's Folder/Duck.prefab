@@ -89,7 +89,7 @@ MonoBehaviour:
   onShrinkNeck:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -7893055951345265645}
+      - m_Target: {fileID: 8774554125649318633}
         m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
         m_MethodName: Stop
         m_Mode: 1
@@ -101,21 +101,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 512368038128712078}
-        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onStretchNeck:
-    m_PersistentCalls:
-      m_Calls:
       - m_Target: {fileID: -7893055951345265645}
         m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
         m_MethodName: Play
@@ -128,7 +113,37 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 512368038128712078}
+  onStretchNeckStop:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8774554125649318633}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onStretchNeckStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8774554125649318633}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: -7893055951345265645}
         m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
         m_MethodName: Stop
         m_Mode: 1
@@ -231,6 +246,8 @@ MonoBehaviour:
   Params:
   - Name: Parameter 1
     Value: 5
+  - Name: sfx_type
+    Value: 3
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
@@ -264,6 +281,8 @@ MonoBehaviour:
   Params:
   - Name: Parameter 1
     Value: 3
+  - Name: sfx_type
+    Value: 4
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
@@ -297,6 +316,8 @@ MonoBehaviour:
   Params:
   - Name: Parameter 1
     Value: 4
+  - Name: sfx_type
+    Value: 5
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
