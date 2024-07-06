@@ -2,17 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class LakeRotation : MonoBehaviour
+
 {
-    // Start is called before the first frame update
+
+public GameObject lake;
+public Vector3 rotationSpeed = new Vector3(0, 100, 0); // Rotation speed in degrees per second.
+
+
     void Start()
     {
-        
+        lake = this.gameObject;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        // Rotate the object
+        transform.Rotate(rotationSpeed * Time.deltaTime);
     }
 }

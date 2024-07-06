@@ -171,34 +171,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7935800271972204938, guid: 8c9f5ebb3b701af4f88eea064abff795, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.76604277
-      objectReference: {fileID: 0}
-    - target: {fileID: 7935800271972204938, guid: 8c9f5ebb3b701af4f88eea064abff795, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.0013294219
-      objectReference: {fileID: 0}
-    - target: {fileID: 7935800271972204938, guid: 8c9f5ebb3b701af4f88eea064abff795, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.6427862
-      objectReference: {fileID: 0}
-    - target: {fileID: 7935800271972204938, guid: 8c9f5ebb3b701af4f88eea064abff795, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.0015843435
-      objectReference: {fileID: 0}
-    - target: {fileID: 7935800271972204938, guid: 8c9f5ebb3b701af4f88eea064abff795, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -80
-      objectReference: {fileID: 0}
     - target: {fileID: 8603868958486676486, guid: 8c9f5ebb3b701af4f88eea064abff795, type: 3}
       propertyPath: m_Name
       value: Duck Player Prefab
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 7992248511705921692, guid: 8c9f5ebb3b701af4f88eea064abff795, type: 3}
-    - {fileID: 7584753513278009357, guid: 8c9f5ebb3b701af4f88eea064abff795, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c9f5ebb3b701af4f88eea064abff795, type: 3}
@@ -211,6 +189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 228355525}
+  - component: {fileID: 228355526}
   m_Layer: 0
   m_Name: Lake Mockup
   m_TagString: Untagged
@@ -238,6 +217,20 @@ Transform:
   - {fileID: 2105807259}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &228355526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228355524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b75cffe0d9e7e9d49bab2f3fb3b78f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lake: {fileID: 228355524}
+  rotationSpeed: {x: 0, y: 10, z: 0}
 --- !u!1 &419118984
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,6 +352,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ab82c5710e2a0e4f92bcc68cfaf3df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacle: {fileID: 0}
+  speed: 1
 --- !u!4 &547520847
 Transform:
   m_ObjectHideFlags: 0
@@ -386,9 +381,10 @@ GameObject:
   - component: {fileID: 613578886}
   - component: {fileID: 613578885}
   - component: {fileID: 613578884}
+  - component: {fileID: 613578888}
   m_Layer: 0
   m_Name: Obstacle
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -481,6 +477,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &613578888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613578883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0322ff45dea99564a981319a8cf33afe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacle: {fileID: 0}
+  speed: 1
 --- !u!1 &828533735
 GameObject:
   m_ObjectHideFlags: 0
