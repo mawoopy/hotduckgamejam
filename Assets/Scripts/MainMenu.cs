@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayButton()
     {
-        SceneManager.LoadScene("Level");
+        SceneManager.LoadScene("Lake");
     }
 
     public void CreditsButton()

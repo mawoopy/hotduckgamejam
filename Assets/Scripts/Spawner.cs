@@ -3,21 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
 public class Spawner : MonoBehaviour
-
 {
+    public GameObject obstacle;  // Reference to the Prefab to spawn
+    public GameObject fly;  // Reference to the Prefab to spawn
+    public Transform spawnPoint;      // Location where the object will be spawned
+    public float spawnInterval = 2f;  // Time interval between spawns
 
-public GameObject obstacle;
-public float speed = 1.0f; // Speed at which the object will move to the left.
-
+    private float timeSinceLastSpawn;
 
     void Start()
     {
         obstacle = GameObject.Find("Obstacle");
+
+        fly = GameObject.Find("Dragonfly");
+
+        timeSinceLastSpawn = 0f;
     }
 
-    //spawn Obstacle every ? seconds
+    void Update()
+    {
+        // Update the time since the last spawn
+        timeSinceLastSpawn += Time.deltaTime;
 
-    //spawn Fly every ? seconds
+        // Check if it's time to spawn a new object
+        if (timeSinceLastSpawn >= spawnInterval)
+        {
+            SpawnObject();
+            timeSinceLastSpawn = 0f; // Reset the spawn timer
+        }
+    }
+
+    void SpawnObject()
+    {
+        //spawn Obstacle every ? seconds
+        Instantiate(obstacle, spawnPoint.position, spawnPoint.rotation);
+
+        //spawn Fly every ? seconds
+        Instantiate(fly, spawnPoint.position, spawnPoint.rotation);
+    }
 }

@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ExtendNeck : MonoBehaviour
 {
+    [SerializeField] private UnityEvent onShrinkNeck;
+    [SerializeField] private UnityEvent onStretchNeckStop;
+    [SerializeField] private UnityEvent onStretchNeckStart;
+
     [Header("Components")]
     [SerializeField] private Transform topNeckBone;
     [SerializeField] private Transform duckFoot;
@@ -23,6 +28,7 @@ public class ExtendNeck : MonoBehaviour
     float currentTopNeckPos = 0;
     private float minNeckLength;
     public float extendSpeed;
+    private bool isExtending = false;
 
     [Header("Status")]
     public bool isNeckGoingBack;
@@ -47,13 +53,24 @@ public class ExtendNeck : MonoBehaviour
 
         if (Input.GetKey(keyToExtendNeck) && isGrounded) 
         {
+            if (!isExtending) {
+                isExtending = true;
+                onStretchNeckStart.Invoke();
+            }
             ExtendTheNeck();
+            Debug.Log("extending neck");
+        }
+        if (!Input.GetKey(keyToExtendNeck)) {
+            isExtending = false;
+            onStretchNeckStop.Invoke();
         }
         if (Input.GetKey(keyToShortenNeck) && !neckHasBack)
         {
             isNeckGoingBack = true;
             currentBottomNeckPos = rootController.position.y;
             currentTopNeckPos = topNeckBone.position.y;
+
+            onShrinkNeck.Invoke();
             Debug.Log("going back");
         }
 
