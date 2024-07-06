@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class QuackControl : MonoBehaviour
 {
-    [Header("Audio Component")]
-    private AudioSource quackAudioSource;
-    [SerializeField]private AudioClip quackSound;
+    [SerializeField] private UnityEvent onQuack;
+
     [SerializeField]private KeyCode quackKey;
     [Header("Eat Flies")]
     [SerializeField] private LayerMask fliesLayer;
@@ -16,11 +16,6 @@ public class QuackControl : MonoBehaviour
     public bool mouseIsOpen;
     public int fliesEatNum;
     bool hasPlayed = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        quackAudioSource = GetComponent<AudioSource>();
-    }
 
     // Update is called once per frame
     void Update()
@@ -29,7 +24,7 @@ public class QuackControl : MonoBehaviour
         {
             if (!hasPlayed)
             {
-                quackAudioSource.Play();
+                onQuack.Invoke();
                 hasPlayed = true;
             }
             
@@ -40,7 +35,6 @@ public class QuackControl : MonoBehaviour
         if (Input.GetKeyUp(quackKey))
         {
             hasPlayed = false;
-            quackAudioSource.Stop();
             Collider[] flyCollider = Physics.OverlapSphere (mouthTransform.position, eatRadius, fliesLayer);
             if (flyCollider.Length > 0)
             {
