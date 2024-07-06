@@ -20,7 +20,7 @@
 		</property>
 		<property name="enumerationLabels">
 			<value>Eat pea</value>
-			<value>Extand</value>
+			<value>Expand</value>
 			<value>Collaps</value>
 			<value>Stretch up</value>
 			<value>Stretch down</value>
