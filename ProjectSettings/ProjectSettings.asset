@@ -598,7 +598,7 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Standalone: PWB_BIRP
+    Standalone: PWB_BIRP;MOREMOUNTAINS_NICEVIBRATIONS_INSTALLED
     WebGL: PWB_BIRP
   additionalCompilerArguments: {}
   platformArchitecture: {}
